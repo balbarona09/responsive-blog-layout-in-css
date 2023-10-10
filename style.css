@@ -1,3 +1,4 @@
+/* CSS Reset - Start */
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +8,9 @@ body {
   font-family: sans-serif;
   background: hsl(0, 0%, 92%);
 }
+/* CSS Reset - End */
+
+/* Navbar - Start */
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -29,9 +33,6 @@ body {
 }
 .navbar-small-screen, .navbar-close {
   display: none;
-}
-.content {
-  padding: 20px;
 }
 
 @media screen and (max-width: 992px) {
@@ -86,7 +87,9 @@ body {
     width: 270px;
   }
 }
+/* Navbar - End */
 
+/* Content Layout - Start*/
 .top-container {
   display: flex;
   flex-wrap: wrap;
@@ -101,33 +104,64 @@ body {
 }
 .main-content, .side-content {
   box-shadow: 0px 0px 8px hsl(0, 0%, 70%);
-  padding: 20px;
   background: white;
   margin-bottom: 10px;
 }
+.side-content {
+  padding: 20px;
+}
+
+/* For Homepage */
+.main-content.homepage {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blog-post-item {
+  flex-basis: 50%;
+  padding: 10px 15px;
+}
+/* For Blog Post */
+.main-content.post {
+  padding: 20px;
+}
 
 @media screen and (max-width: 992px) {
-  .main-content, .side-container {
+  .main-content, .side-container, .blog-post-item {
     flex-basis: 100%;
   }
   .top-container, .side-container {
-    padding: 0;
+    padding: 20px 0;
   }
 }
+/* Content Layout - End*/
 
-.blog-title {
-  padding: 10px 0;
+/*Content Styling - Start */
+
+/* For Homepage */
+.page-title {
+  text-align: center;
+  margin-top: 12px;
 }
+.blog-link {
+  text-decoration: none;
+  color: black;
+}
+.blog-link:hover {
+  color: blue;
+}
+/* For Blog Post */
 .blog-date {
   padding: 5px 0;
   color: hsl(0, 0%, 30%);
 }
-.image {
-  width: 100%;
-}
-.blog-paragraph {
+
+.blog-text {
   padding: 10px 0;
   line-height: 1.3rem;
+  color: hsl(0, 0%, 10%);
+}
+.image {
+  width: 100%;
 }
 
 .sidebar-title {
@@ -145,9 +179,11 @@ body {
   color: blue;
 }
 
+/* Footer - Start*/
 .footer {
   background: hsl(0, 0%, 40%);
   padding: 20px;
   color: white;
   text-align: center;
 }
+/* Footer - Start*/
